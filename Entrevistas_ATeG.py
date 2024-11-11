@@ -7,7 +7,7 @@ import json
 st.markdown(
     """
     <div style="text-align: center; margin-bottom: 10px;">
-        <img src="https://imgur.com/ruDtZT7.png" width="150">
+        <img src="https://imgur.com/ruDtZT7.png" width="250">
     </div>
     <h1 style="text-align: center; font-size: 50px; font-weight: bold; color: #235937;">Agenda ATeG</h1>
     <h2 style="text-align: center; font-size: 30px; margin-top: -35px;">Agendamento de Entrevistas</h2>
