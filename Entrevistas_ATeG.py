@@ -6,14 +6,6 @@ import json
 
 st.markdown(
     """
-    <h1 style="text-align: center; font-size: 50px; font-weight: bold; color: #235937; margin-bottom: -35px;">Agenda ATeG</h1>
-    <h2 style="text-align: center; font-size: 30px;">Agendamento de Entrevistas</h2>
-    """, 
-    unsafe_allow_html=True
-)
-
-st.markdown(
-    """
     <div style="text-align: center; margin-bottom: 10px;">
         <img src="https://imgur.com/ruDtZT7.png" width="200">
     </div>
