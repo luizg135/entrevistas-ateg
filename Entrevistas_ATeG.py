@@ -73,7 +73,7 @@ else:
             return True
 
         # Interface Streamlit
-        st.title('Agendamento de Entrevistas | ATeG')
+        # st.title('Agendamento de Entrevistas | ATeG')
 
         # Formulário de agendamento
         nome = st.text_input('Digite seu nome:')
