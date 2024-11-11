@@ -2,7 +2,6 @@ import streamlit as st
 import pandas as pd
 import gspread
 from oauth2client.service_account import ServiceAccountCredentials
-import os
 import json
 
 # Configuração do Google Sheets
@@ -11,15 +10,15 @@ scope = ["https://spreadsheets.google.com/feeds",
          "https://www.googleapis.com/auth/drive.file", 
          "https://www.googleapis.com/auth/drive"]
 
-# Carregar as credenciais do Google Sheets a partir de uma variável de ambiente
-creds_json = os.getenv('GOOGLE_SHEET_CREDENTIALS_JSON')
+# Carregar as credenciais do Google Sheets a partir do Streamlit Secrets
+creds_json = st.secrets["google"]["GOOGLE_SHEET_CREDENTIALS_JSON"]
 
-# Se a variável de ambiente não estiver configurada corretamente, exibe erro
+# Se as credenciais não estiverem configuradas corretamente, exibe erro
 if not creds_json:
     st.error("Erro: As credenciais do Google não foram encontradas nas variáveis de ambiente.")
 else:
     try:
-        # Carregar credenciais usando o JSON passado pela variável de ambiente
+        # Carregar credenciais usando o JSON passado pelo Streamlit secrets
         creds_dict = json.loads(creds_json)  # Convertendo de JSON para dicionário
         creds = ServiceAccountCredentials.from_json_keyfile_dict(creds_dict, scope)
         client = gspread.authorize(creds)
