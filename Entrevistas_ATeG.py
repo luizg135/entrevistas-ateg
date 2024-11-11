@@ -17,7 +17,7 @@ st.markdown(
     unsafe_allow_html=True
 )
 
-# st.markdown(
+st.markdown(
     """
     <div style="text-align: center; margin-bottom: 10px;">
         <img src="https://imgur.com/ruDtZT7.png" width="200">
