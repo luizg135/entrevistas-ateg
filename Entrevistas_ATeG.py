@@ -10,7 +10,7 @@ st.markdown(
         <img src="https://imgur.com/ruDtZT7.png" width="200">
     </div>
     <h1 style="text-align: center; font-size: 50px; font-weight: bold; color: #235937;">Agenda ATeG</h1>
-    <h2 style="text-align: center; font-size: 30px; margin-top: -10px;">Agendamento de Entrevistas</h2>
+    <h2 style="text-align: center; font-size: 30px; margin-top: -35px;">Agendamento de Entrevistas</h2>
     """,
     unsafe_allow_html=True
 )
