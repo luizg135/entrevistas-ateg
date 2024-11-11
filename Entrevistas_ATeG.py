@@ -15,7 +15,7 @@ st.markdown(
 st.markdown(
     """
     <div style="position: fixed; bottom: 10px; left: 50%; transform: translateX(-50%);">
-        <img src="https://imgur.com/a/OD16Dtc" width="200">
+        <img src="https://imgur.com/a/OD16Dtc.png" width="200">
     </div>
     """, 
     unsafe_allow_html=True
