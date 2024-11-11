@@ -6,6 +6,18 @@ import json
 
 st.markdown(
     """
+    <style>
+        /* Define a cor de fundo da página inteira */
+        .main {
+            background-color: #235937;
+        }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
+
+st.markdown(
+    """
     <div style="background-color: white; padding: 20px; border-radius: 8px; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); display: flex; align-items: center; margin-bottom: 60px;">
         <div style="flex: 1; text-align: left;">
             <img src="https://imgur.com/ruDtZT7.png" width="150" style="margin-right: 10px;">
