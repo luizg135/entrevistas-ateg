@@ -12,15 +12,6 @@ st.markdown(
     unsafe_allow_html=True
 )
 
-st.markdown(
-    """
-    <div style="position: fixed; bottom: 10px; left: 50%; transform: translateX(-50%);">
-        <img src="https://drive.google.com/uc?id=1ERjOdoExOsQ7hekZFOJFwiZeyUz4er1c" width="200">
-    </div>
-    """, 
-    unsafe_allow_html=True
-)
-
 # Configuração do Google Sheets
 scope = ["https://spreadsheets.google.com/feeds", 
          "https://www.googleapis.com/auth/spreadsheets", 
