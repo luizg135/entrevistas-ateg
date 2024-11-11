@@ -67,13 +67,17 @@ else:
         # Interface Streamlit
         # st.title('Agendamento de Entrevistas | ATeG')
 
-st.markdown(
-    """
-    <h1 style="text-align: center; font-size: 50px; font-weight: bold;">Agenda ATeG</h1>
-    <h2 style="text-align: center; font-size: 30px;">Agendamento de Entrevistas</h2>
-    """, 
-    unsafe_allow_html=True
-)
+try:
+    st.markdown(
+        """
+        <h1 style="text-align: center; font-size: 50px; font-weight: bold;">Agenda ATeG</h1>
+        <h2 style="text-align: center; font-size: 30px;">Agendamento de Entrevistas</h2>
+        """, 
+        unsafe_allow_html=True
+    )
+except Exception as e:
+    st.error(f"Erro ao carregar o conteúdo: {e}")
+
         # Formulário de agendamento
         nome = st.text_input('Digite seu nome:')
         data = st.selectbox('Escolha a data:', datas)
