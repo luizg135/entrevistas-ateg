@@ -6,7 +6,7 @@ import json
 
 st.markdown(
     """
-    <div style="background-color: white; padding: 20px; border-radius: 8px; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); display: flex; align-items: center; margin-bottom: 40px;">
+    <div style="background-color: white; padding: 20px; border-radius: 8px; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); display: flex; align-items: center; margin-bottom: 45px;">
         <div style="flex: 1; text-align: left;">
             <img src="https://imgur.com/ruDtZT7.png" width="150" style="margin-right: 10px;">
         </div>
