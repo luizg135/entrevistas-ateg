@@ -6,11 +6,12 @@ import json
 
 st.markdown(
     """
-    <h1 style="text-align: center; font-size: 50px; font-weight: bold; margin-bottom: -35px;">Agenda ATeG</h1>
+    <h1 style="text-align: center; font-size: 50px; font-weight: bold; color: #235937; margin-bottom: -35px;">Agenda ATeG</h1>
     <h2 style="text-align: center; font-size: 30px;">Agendamento de Entrevistas</h2>
     """, 
     unsafe_allow_html=True
 )
+
 
 # Configuração do Google Sheets
 scope = ["https://spreadsheets.google.com/feeds", 
