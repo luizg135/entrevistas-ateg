@@ -15,7 +15,7 @@ st.markdown(
 st.markdown(
     """
     <div style="position: fixed; bottom: 10px; left: 50%; transform: translateX(-50%);">
-        <img src="https://drive.google.com/file/d/1ERjOdoExOsQ7hekZFOJFwiZeyUz4er1c/view?usp=sharing" width="200">
+        <img src="https://drive.google.com/uc?id=1ERjOdoExOsQ7hekZFOJFwiZeyUz4er1c" width="200">
     </div>
     """, 
     unsafe_allow_html=True
