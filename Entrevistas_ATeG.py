@@ -4,6 +4,28 @@ import gspread
 from oauth2client.service_account import ServiceAccountCredentials
 import json
 
+
+st.markdown(
+    """
+    <style>
+        /* Define o fundo da página principal como verde */
+        .main {
+            background-color: #235937;
+        }
+    </style>
+    <div style="background-color: white; padding: 20px; border-radius: 8px; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); display: flex; align-items: center; margin-bottom: 60px;">
+        <div style="flex: 1; text-align: left;">
+            <img src="https://imgur.com/ruDtZT7.png" width="150" style="margin-right: 10px;">
+        </div>
+        <div style="flex: 3; text-align: center;">
+            <h1 style="font-size: 50px; font-weight: bold; color: #235937; margin: 0;">Agenda ATeG</h1>
+            <h2 style="font-size: 30px; color: #235937; margin-top: -35px;">Agendamento de Entrevistas</h2>
+        </div>
+    </div>
+    """,
+    unsafe_allow_html=True
+)
+
 st.markdown(
     """
     <div style="background-color: white; padding: 20px; border-radius: 8px; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); display: flex; align-items: center; margin-bottom: 60px;">
