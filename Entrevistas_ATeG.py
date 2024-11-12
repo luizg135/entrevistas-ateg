@@ -34,7 +34,7 @@ st.markdown(
         </div>
         <div style="flex: 3; text-align: center;">
             <h1 style="font-size: 50px; font-weight: bold; color: #235937; margin: 0;">Agenda ATeG</h1>
-            <h2 style="font-size: 20px; color: #000000; margin-top: -40px;">Agendamento de Entrevistas</h2>
+            <h2 style="font-size: 20px; color: #000000; margin-top: -37px;">Agendamento de Entrevistas</h2>
         </div>
     </div>
     """,
