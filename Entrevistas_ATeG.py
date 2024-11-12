@@ -4,12 +4,13 @@ import gspread
 from oauth2client.service_account import ServiceAccountCredentials
 import json
 
-# Configura o título e o ícone da aba
+# Título e ícone da aba
 st.set_page_config(
-    page_title="Agenda ATeG",  # Título da aba
-    page_icon="🗓️"  # Ícone da aba, pode ser um emoji ou o caminho de uma imagem .png
+    page_title="Agenda ATeG", 
+    page_icon="🗓️" 
 )
 
+# Imagem de fundo
 st.markdown(
     f"""
     <style>
@@ -24,6 +25,7 @@ st.markdown(
     unsafe_allow_html=True
 )
 
+# Título, Caixa e Logo do Sistema FAEP
 st.markdown(
     """
     <div style="background-color: white; padding: 20px; border-radius: 8px; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); display: flex; align-items: center; margin-bottom: 60px;">
@@ -39,16 +41,16 @@ st.markdown(
     unsafe_allow_html=True
 )
 
-# Configuração do Google Sheets
+# Configuração do Planilhas do Google
 scope = ["https://spreadsheets.google.com/feeds", 
          "https://www.googleapis.com/auth/spreadsheets", 
          "https://www.googleapis.com/auth/drive.file", 
          "https://www.googleapis.com/auth/drive"]
 
-# Carregar as credenciais do Google Sheets a partir do Streamlit Secrets
+# Carregar as credenciais
 creds_json = st.secrets["google"]["GOOGLE_SHEET_CREDENTIALS_JSON"]
 
-# Se as credenciais não estiverem configuradas corretamente, exibe erro
+# Se as credenciais não estiverem configuradas
 if not creds_json:
     st.error("Erro: As credenciais do Google não foram encontradas nas variáveis de ambiente.")
 else:
@@ -66,7 +68,7 @@ else:
         datas = ['13/11/2024', '14/11/2024']
         horarios = ['13h30', '14h00', '14h30', '15h00', '15h30', '16h00', '16h30', '17h00']
 
-        # Função para recarregar os dados de agendamentos do Google Sheets
+        # Função para recarregar os dados de agendamentos
         def carregar_agendamentos():
             try:
                 agendamentos = pd.DataFrame(sheet.get_all_records())
