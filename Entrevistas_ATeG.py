@@ -12,6 +12,20 @@ st.set_page_config(
     page_icon="🗓️"  # Ícone da aba, pode ser um emoji ou o caminho de uma imagem .png
 )
 
+# CSS para adicionar a imagem de fundo
+st.markdown(
+    f"""
+    <style>
+    .stApp {{
+        background-image: url("https://imgur.com/a/KKFr3oG.png");  /* Coloque o link direto aqui */
+        background-size: cover;
+        background-position: center;
+    }}
+    </style>
+    """,
+    unsafe_allow_html=True
+)
+
 st.markdown(
     """
     <div style="background-color: white; padding: 20px; border-radius: 8px; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); display: flex; align-items: center; margin-bottom: 60px;">
