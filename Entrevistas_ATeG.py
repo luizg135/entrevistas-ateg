@@ -17,7 +17,7 @@ st.markdown(
     f"""
     <style>
     .stApp {{
-        background-image: url("https://imgur.com/a/KKFr3oG.png");  /* Coloque o link direto aqui */
+        background-image: url("https://imgur.com/Mmj3g7Z.png");  /* Coloque o link direto aqui */
         background-size: cover;
         background-position: center;
     }}
