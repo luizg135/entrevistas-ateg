@@ -12,13 +12,12 @@ st.set_page_config(
     page_icon="🗓️"  # Ícone da aba, pode ser um emoji ou o caminho de uma imagem .png
 )
 
-# CSS para adicionar a imagem de fundo com transparência
 st.markdown(
     f"""
     <style>
     .stApp {{
-        background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url("https://imgur.com/Mmj3g7Z.png");
-        background-size: 60%;  /* Ajuste o tamanho da imagem (80% do container) */
+        background-image: linear-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4)), url("https://imgur.com/Mmj3g7Z.png");
+        background-size: 60%;  /* Ajuste o tamanho da imagem (60% do container) */
         background-position: center;
         background-repeat: no-repeat;
     }}
