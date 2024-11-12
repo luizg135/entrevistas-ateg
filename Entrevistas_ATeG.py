@@ -6,13 +6,30 @@ import json
 
 import streamlit as st
 
-# CSS para fundo com gradiente
 st.markdown(
     """
     <style>
-    /* Fundo com gradiente */
+    /* Fundo geral com gradiente */
     .stApp {
         background: linear-gradient(to bottom, #e6f2e6, #cce0cc);
+    }
+    
+    /* Card branco para a área central */
+    .main-card {
+        background-color: white;
+        border-radius: 15px;
+        padding: 2rem;
+        box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+        width: 50%;
+        margin: auto;
+    }
+    
+    /* Centraliza o conteúdo */
+    .stApp > div:first-child {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
     }
     </style>
     """,
