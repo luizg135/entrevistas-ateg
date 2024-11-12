@@ -18,7 +18,7 @@ st.markdown(
     <style>
     .stApp {{
         background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url("https://imgur.com/Mmj3g7Z.png");
-        background-size: 80%;  /* Ajuste o tamanho da imagem (80% do container) */
+        background-size: 60%;  /* Ajuste o tamanho da imagem (80% do container) */
         background-position: center;
         background-repeat: no-repeat;
     }}
