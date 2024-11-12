@@ -6,6 +6,12 @@ import json
 
 import streamlit as st
 
+# Configura o título e o ícone da aba
+st.set_page_config(
+    page_title="Agenda ATeG",  # Título da aba
+    page_icon="🗓️"  # Ícone da aba, pode ser um emoji ou o caminho de uma imagem .png
+)
+
 st.markdown(
     """
     <div style="background-color: white; padding: 20px; border-radius: 8px; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); display: flex; align-items: center; margin-bottom: 60px;">
