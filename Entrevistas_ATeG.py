@@ -4,6 +4,21 @@ import gspread
 from oauth2client.service_account import ServiceAccountCredentials
 import json
 
+import streamlit as st
+
+# CSS para fundo com gradiente
+st.markdown(
+    """
+    <style>
+    /* Fundo com gradiente */
+    .stApp {
+        background: linear-gradient(to bottom, #e6f2e6, #cce0cc);
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
+
 st.markdown(
     """
     <div style="background-color: white; padding: 20px; border-radius: 8px; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); display: flex; align-items: center; margin-bottom: 60px;">
