@@ -122,6 +122,8 @@ else:
                 if validar_nome(nome) and agendar_entrevista(data, horario, nome):
                     agendamentos = carregar_agendamentos()
 
+        st.markdown("<p style='color: red;'>* Campos de preenchimento obrigatório</p>", unsafe_allow_html=True)
+        
         # Campo de consulta de agendamento
         st.markdown("---")
         nome_busca = st.text_input("Digite seu nome para verificar o agendamento:", "")
@@ -145,8 +147,6 @@ else:
                     )
             else:
                 st.info("Nenhum agendamento encontrado para o nome informado.")
-
-        st.markdown("<p style='color: red;'>* Campos de preenchimento obrigatório</p>", unsafe_allow_html=True)
 
     except Exception as e:
         st.error(f"Erro ao configurar as credenciais ou acessar o Google Sheets: {e}")
