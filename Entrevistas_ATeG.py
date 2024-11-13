@@ -132,7 +132,6 @@ else:
             """
             <div style="background-color: #f9f9f9; padding: 20px; border-radius: 8px; border: 1px solid #e0e0e0; margin-top: 30px;">
                 <h3 style="font-size: 18px; color: #235937; font-weight: bold; text-align: center; margin-bottom: 10px;">Consultar Agendamento</h3>
-                # <p style="color: #666; text-align: center; margin-bottom: 20px;">Digite seu nome para verificar o agendamento</p>
             </div>
             """,
             unsafe_allow_html=True
