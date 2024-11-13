@@ -135,10 +135,9 @@ else:
                 if agendamentos_filtrados.empty:
                     st.info("Nenhum agendamento encontrado para o nome informado.")
                 else:
-                    # st.subheader("Agendamentos encontrados:")
                     st.markdown(
     """
-    <h3 style="font-size: 20px; color: #000000; font-weight: bold;">Agendamentos encontrados:</h3>
+    <h3 style="font-size: 15px; color: #000000; font-weight: bold;">Agendamentos encontrados:</h3>
     """,
     unsafe_allow_html=True
 )
