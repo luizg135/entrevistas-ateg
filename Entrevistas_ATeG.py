@@ -287,6 +287,7 @@ else:
             if agendamentos_filtrados.empty:
                 st.info("Nenhum agendamento encontrado para o nome informado.")
             else:
+                st.subheader("Agendamentos encontrados:")
                 for idx, row in agendamentos_filtrados.iterrows():
                     st.markdown(
                         f"""
