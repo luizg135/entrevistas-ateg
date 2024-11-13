@@ -281,36 +281,21 @@ else:
         st.markdown("---")
         nome_busca = st.text_input("Digite seu nome para verificar o agendamento:", "")
 
-        if st.button("Pesquisar"):
+        if nome_busca:
             agendamentos_filtrados = agendamentos[agendamentos['Nome'].str.contains(nome_busca, case=False, na=False)]
-            nomes_unicos = agendamentos_filtrados['Nome'].unique()
 
-            # Usa st.session_state para lembrar o nome selecionado
-            if 'nome_selecionado' not in st.session_state:
-                st.session_state['nome_selecionado'] = ""
-
-            if len(nomes_unicos) > 1:
-                st.session_state['nome_selecionado'] = st.selectbox("Selecione seu nome completo:", [""] + list(nomes_unicos), index=0 if st.session_state['nome_selecionado'] == "" else list(nomes_unicos).index(st.session_state['nome_selecionado']) + 1)
-
-            elif len(nomes_unicos) == 1:
-                st.session_state['nome_selecionado'] = nomes_unicos[0]
-
-            if st.session_state['nome_selecionado']:
-                agendamentos_selecionados = agendamentos_filtrados[agendamentos_filtrados['Nome'] == st.session_state['nome_selecionado']]
-
-                for idx, row in agendamentos_selecionados.iterrows():
+            if agendamentos_filtrados.empty:
+                st.info("Nenhum agendamento encontrado para o nome informado.")
+            else:
+                for idx, row in agendamentos_filtrados.iterrows():
                     st.markdown(
                         f"""
                         <div style="background-color: #f0f0f0; padding: 10px; border-radius: 5px; margin-bottom: 10px;">
-                            <p><strong>Nome:</strong> {row['Nome']}</p>
+                            <p><strong>Nome Completo:</strong> {row['Nome']}</p>
                             <p><strong>Data:</strong> {row['Data']}</p>
                             <p><strong>Horário:</strong> {row['Horário']}</p>
                         </div>
-                        """, unsafe_allow_html=True
-                    )
-
-            else:
-                st.info("Nenhum agendamento encontrado para o nome informado.")
+                        """, unsafe_allow_html=True)
 
     except Exception as e:
         st.error(f"Erro ao configurar as credenciais ou acessar o Google Sheets: {e}")
