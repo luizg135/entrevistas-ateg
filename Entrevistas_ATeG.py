@@ -286,15 +286,13 @@ else:
             if len(agendamentos_filtrados) > 1:
                 nomes_unicos = agendamentos_filtrados['Nome'].unique()
                 # Adiciona uma opção vazia no início da lista para evitar seleção automática
-                nomes_unicos_opcoes = [""] + list(nomes_unicos)
-                
-                nome_selecionado = st.selectbox("Selecione seu nome completo:", nomes_unicos_opcoes)
+                nome_selecionado = st.selectbox("Selecione seu nome completo:", [""] + list(nomes_unicos))
 
-                # Mostra os detalhes do agendamento somente se um nome foi selecionado (não vazio)
-                if nome_selecionado:
-                    agendamentos_filtrados = agendamentos_filtrados[agendamentos_filtrados['Nome'] == nome_selecionado]
+                # Mostra os detalhes do agendamento somente se um nome foi selecionado (diferente de vazio)
+                if nome_selecionado and nome_selecionado != "":
+                    agendamentos_selecionados = agendamentos_filtrados[agendamentos_filtrados['Nome'] == nome_selecionado]
 
-                    for idx, row in agendamentos_filtrados.iterrows():
+                    for idx, row in agendamentos_selecionados.iterrows():
                         st.markdown(
                             f"""
                             <div style="background-color: #f0f0f0; padding: 10px; border-radius: 5px; margin-bottom: 10px;">
