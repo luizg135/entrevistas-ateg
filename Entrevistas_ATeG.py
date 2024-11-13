@@ -190,11 +190,11 @@ def validar_nome(nome):
     return bool(re.match(padrao_nome, nome)) and len(nome) >= 3
 
 # Input de nome com validação
-nome = st.text_input('Digite seu nome completo* (mínimo 3 letras e um espaço):')
+nome = st.text_input('Digite seu nome: *')
 
 # Validação e aviso
 if nome and not validar_nome(nome):
-    st.error("Nome inválido. Digite seu nome completo com pelo menos 3 letras e um espaço.")
+    st.error("Por favor, digite seu nome completo.")
 
 # Carregar as credenciais
 creds_json = st.secrets["google"]["GOOGLE_SHEET_CREDENTIALS_JSON"]
@@ -253,7 +253,7 @@ else:
         # Interface Streamlit
 
         # Formulário de agendamento
-        data = st.selectbox('Escolha a data*:', datas)
+        data = st.selectbox('Escolha a data: *', datas)
 
         # Recarregar os agendamentos para garantir a atualização
         agendamentos = carregar_agendamentos()
@@ -263,7 +263,7 @@ else:
         if not horarios_disponiveis:
             st.warning("Todos os horários para esta data já foram agendados. Escolha outra data.")
         else:
-            horario = st.selectbox('Escolha o horário*:', horarios_disponiveis)
+            horario = st.selectbox('Escolha o horário: *', horarios_disponiveis)
 
             # Verificar se a data, horário e nome estão disponíveis
             if not nome.strip():
