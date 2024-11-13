@@ -131,7 +131,7 @@ else:
             agendamentos_filtrados = agendamentos[agendamentos['Nome'].str.contains(nome_busca, case=False, na=False)]
 
             if len(agendamentos_filtrados) > 1:
-                nome_selecionado = st.selectbox("Selecione seu nome", agendamentos_filtrados['Nome'].unique())
+                nome_selecionado = st.selectbox("Selecione seu nome completo:", agendamentos_filtrados['Nome'].unique())
                 agendamentos_filtrados = agendamentos_filtrados[agendamentos_filtrados['Nome'] == nome_selecionado]
 
             if not agendamentos_filtrados.empty:
